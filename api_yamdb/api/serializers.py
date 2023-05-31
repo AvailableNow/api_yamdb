@@ -72,10 +72,8 @@ class ReviewSerializer(serializers.ModelSerializer):
             return data
         title_id = self.context['view'].kwargs.get('title_id')
         author = self.context['request'].user
-        review = Review.objects.filter(
-            author=author, title=title_id
-        )
-        if review.exists():
+        if Review.objects.filter(
+            author=author, title=title_id).exists():
             raise serializers.ValidationError(
                 'Вы не можете добавить более'
                 'одного отзыва на произведение')

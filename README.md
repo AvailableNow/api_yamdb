@@ -61,13 +61,17 @@ $ python -m pip install --upgrade pip
 $ pip install -r requirements.txt
 ```
 
-6. Выполните миграции:
+6. Перейти в основную папку:
 ```
-$ python manage.py makemigrations
+$ cd api_yamdb
+```
+
+7. Выполните миграции:
+```
 $ python manage.py migrate
 ```
 
-7. Запустите проект:
+8. Запустите проект:
 ```
 $ python manage.py runserver
 ```
